@@ -5,8 +5,12 @@ start = process_time()
 
 inp = input('enter the file path\ntype exit to exit the program\n')
 
-if inp == ''
-im = Image.open("upisidedown-'bar'.png").convert('RGB')
+if inp.lower() == 'exit':
+    exit()
+if not inp:
+    inp = "upisidedown-'bar'.png"
+
+im = Image.open(inp).convert('RGB')
 
 img = im.load()
 
