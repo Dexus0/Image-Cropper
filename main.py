@@ -7,7 +7,7 @@ inp = input('enter the file path\ntype exit to exit the program\n')
 
 if not inp:
     inp = "upisidedown-'bar'.png"
-elif inp.lower() == 'exit':
+elif inp.lower() == '/exit':
     exit()
 
 
