@@ -3,14 +3,14 @@ from time import process_time
 from os import path
 start = process_time()
 
-# inp = input('enter the file path\ntype exit to exit the program\n')
-#
-# if inp.lower() == 'exit':
-#     exit()
-# if not inp:
-#     inp = "upisidedown-'bar'.png"
+inp = input('enter the file path\ntype exit to exit the program\n')
 
-inp = "upisidedown-'bar'.png"
+if not inp:
+    inp = "upisidedown-'bar'.png"
+elif inp.lower() == 'exit':
+    exit()
+
+
 im = Image.open(inp).convert('RGB')
 
 img = im.load()
