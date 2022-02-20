@@ -1,7 +1,6 @@
 from PIL import Image
 from time import process_time
 from os import path
-start = process_time()
 
 inp = input('enter the file path\ntype exit to exit the program\n')
 
@@ -10,6 +9,7 @@ if not inp:
 elif inp.lower() == '/exit':
     exit()
 
+start = process_time()
 
 im = Image.open(inp).convert('RGB')
 
