@@ -2,11 +2,12 @@ from PIL import Image
 from time import process_time
 from os import path
 
-inp = input('enter the file path\ntype exit to exit the program\n')
+inp = input('''Type "exit" to exit the program.
+File path: ''')
 
 if not inp:
     inp = "upisidedown-'bar'.png"
-elif inp.lower() == '/exit':
+elif inp.lower() == 'exit':
     exit()
 
 start = process_time()
@@ -84,6 +85,6 @@ print('Processing took:', round(end - start, 2), 'seconds', end='\n\n')
 
 im = im.crop((left + 1, top + 1, right, bottom))
 im.show()
-if input('Want to save image?\nYes or No\n').lower() == 'yes':
 
+if input('Want to save image? [Y/n] ').lower() in ('', 'y', 'yes'):
     im.save("cropped.png")
